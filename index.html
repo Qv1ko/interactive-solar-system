@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema Solar 3D Interactivo</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="fps-counter">-- FPS</div>
+
+  <div id="ui">
+    <div id="control-panel">
+      <h1>Sistema Solar 3D</h1>
+      <div class="controls-row">
+        <button id="pause-btn" title="Pausar / Reanudar">Pausar</button>
+        <input type="range" id="speed-slider" min="0" max="100" step="0.1" value="0" />
+        <span id="speed-value">x1.0</span>
+      </div>
+      <div class="toggles-row">
+        <label><input type="checkbox" id="toggle-orbits" checked /> Órbitas</label>
+        <label><input type="checkbox" id="toggle-labels" checked /> Etiquetas</label>
+      </div>
+      <p class="hint">Haz clic en un planeta o luna para ver su información · Arrastra para rotar · Rueda para zoom</p>
+    </div>
+  </div>
+
+  <div id="info-panel" class="hidden">
+    <button id="close-info" title="Cerrar">×</button>
+    <h2 id="info-title"></h2>
+    <p id="info-subtitle"></p>
+    <div id="info-rows"></div>
+    <button id="follow-btn">Seguir</button>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
